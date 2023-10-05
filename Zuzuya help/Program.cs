@@ -11,25 +11,26 @@ while (!exit)
     Console.WriteLine("[0] Exit");
     string choice = Console.ReadLine();
 
-    
-    switch (choice)
+    if (choice == "1")
     {
-        case "1":
-            ShowBalance();
-            break;
-        case "2":
-            CashIn();
-            break;
-        case "3":
-            CashOut();
-            break;
-        case "0":
-            exit = true;
-            Console.WriteLine("Exiting the ATM. Thank you!");
-            break;
-        default:
-            Console.WriteLine("Invalid option. Please try again.");
-            break;
+        ShowBalance();
+    }
+    else if (choice == "2")
+    {
+        CashIn();
+    }
+    else if (choice == "3")
+    {
+        CashOut();
+    }
+    else if (choice == "0")
+    {
+        exit = true;
+        Console.WriteLine("Exiting the ATM. Thank you!");
+    }
+    else
+    {
+        Console.WriteLine("Invalid option. Please try again.");
     }
 
     Console.WriteLine();
